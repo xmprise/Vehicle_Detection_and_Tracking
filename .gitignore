@@ -1,6 +1,7 @@
 .idea/
 object-dataset/
 object-detection-crowdai/
+OwnCollection/
 .ipynb_checkpoints/
 *.p
 *.h5
