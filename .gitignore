@@ -1,3 +1,10 @@
 .idea/
 object-dataset/
 object-detection-crowdai/
+.ipynb_checkpoints/
+*.p
+*.h5
+*.index
+checkpoint
+LeNet.data-00000-of-00001
+*.meta
