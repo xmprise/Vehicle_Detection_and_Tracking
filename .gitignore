@@ -2,6 +2,8 @@
 object-dataset/
 object-detection-crowdai/
 OwnCollection/
+non-vehicles/
+vehicles/
 .ipynb_checkpoints/
 *.p
 *.h5
