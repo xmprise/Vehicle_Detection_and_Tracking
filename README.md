@@ -54,3 +54,5 @@ The data set provided by udacity for the project is the same number of car and n
 - Number of testing examples = 3552
 - Number of valid train examples = 14208
 - Number of valid test examples = 3552
+
+### Sliding Window Search
