@@ -37,3 +37,20 @@ Look at the distribution of the color values of each pixel in the color space.
 The HOG feature is extracted by the get_hog_features method, and the figure below shows the histogram of the orientation gradient of the image, testing the parameters.
 
 ![HOG features](img/hog.png)
+
+The HOG visualization is a representation of the dominant gradient direction with the brightness corresponding to the gradient intensity in each cell, rather than the feature vector. It is known that the YUV color space gives the best performance, so i decided to use it.
+
+The determination of the HOG parameter should be based on experimental results and is selected through several tests. A small number of 300 data sets were sampled and generated and stored as pickle files.
+
+The selected parameter is
+Orient = 11, Pix_per_cell = 16, Cell_per_block = 2, Hog_channel = ALL
+
+### Train a SVM classifier
+
+I used LinearSVC from the sklearn library.
+The data set provided by udacity for the project is the same number of car and nocar, so no separate sampling process is performed and the number of data finally used is as follows.
+
+- Number of training examples = 14208
+- Number of testing examples = 3552
+- Number of valid train examples = 14208
+- Number of valid test examples = 3552
