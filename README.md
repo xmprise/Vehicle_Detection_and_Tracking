@@ -16,6 +16,7 @@ The project is completed in the following stages:
 - Phase 4: Create Heatmap and tracking vehicles.
 
 ### Explore Color Space
+(`.ipynb`: `Explore different approaches to feature generation`)
 - Color histogram test, use histogram of pixel intensity features
 cars[101] images above as an example 
 ![RGB Histogram](img/rgb_hist.png)
@@ -29,5 +30,10 @@ RGB                        |  HSV                      |  YCC
 ![RGB](img/3d_r.png)       | ![HSV](img/3d_h.png)      | ![YCC](img/3d_y.png)
 
 Look at the distribution of the color values of each pixel in the color space.
+
 ### Extract HOG features
+(`.ipynb`: `Classifiers, Project Solution - 1`)
+
 The HOG feature is extracted by the get_hog_features method, and the figure below shows the histogram of the orientation gradient of the image, testing the parameters.
+
+![HOG features](img/hog.png)
