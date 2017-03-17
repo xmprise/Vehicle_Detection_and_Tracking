@@ -56,3 +56,27 @@ The data set provided by udacity for the project is the same number of car and n
 - Number of valid test examples = 3552
 
 ### Sliding Window Search
+
+HOG feature extraction and sliding window search method were used in combination. extract the feature from the whole image without individual extraction in each window, and sub-sample according to window size and supply to the classifier.
+
+The image below is the result of `find_cars` method.
+
+![find cars result](img/sliding.png)
+
+
+The scale has different false positives. So I tested various overlapping regions and combined them to have a duplicate true region. This is a good way to utilize the heatmap technique below.
+Image below is a test to see the coordinates and scale in which the vehicle is detected in the rectangular area.
+These tests will determine the size and scale of the various rectangles appropriately and make the heatmap technique work more robustly.
+
+![boxes_1](img/bb1.png)       |  ![boxes_2](img/bb2.png)
+:----------------------------:|:------------------------------:
+![boxes_1](img/bb3.png)       |  ![boxes_2](img/bb4.png)
+
+
+The combined detection area uses the heat map and the threshold, and the area enclosed by the overlapping rectangles is assigned a higher level of heat.
+
+![heatmap](img/heat1.png)
+
+The final detection area labels the highest column in the heatmap and is set to the end.
+
+![heatmap](img/heat_app.png)
