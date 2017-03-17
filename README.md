@@ -6,7 +6,7 @@ The different approaches are shown below.
 
 Support Vector Machine(SVM)   |  Convolution Neural Network
 :----------------------------:|:------------------------------:
-![SVM](imgfile/result_video_1.gif)    | ![CNN](imgfile/result_video_2.gif)
+![SVM](img/result_video_1.gif)| ![CNN](img/result_video_2.gif)
 
 The project is completed in the following stages:
 
@@ -83,9 +83,9 @@ The final detection area labels the highest column in the heatmap and is set to 
 
 Result image is shown below.
 
-![boxes_1](img/result_3.png)   |  ![boxes_2](img/result_4.png)
+![boxes_1](img/result_3.jpg)   |  ![boxes_2](img/result_4.jpg)
 :----------------------------:|:------------------------------:
-![boxes_1](img/result_5.png)   |  ![boxes_2](img/result_6.png)
+![boxes_1](img/result_5.jpg)   |  ![boxes_2](img/result_6.jpg)
 
 In the first attempt, i learned a lot of data by using SVM classifier and used only Y channel in YUV space. i guess that there was an overfitting problem, but i was advised to use all the color spaces in the forum, and it gave better results. When i learned again with a relatively small number of data, it showed 98.2% accuracy and also been significantly reduced processing time.
 
