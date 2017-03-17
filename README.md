@@ -91,3 +91,15 @@ In the first attempt, i learned a lot of data by using SVM classifier and used o
 
 ### Tracking image frame in a video
 Code that processes video frames is implemented in an `Process Video Frame` cell and stores the previous 13 frames by creating a detection history. Detects by setting a heat map threshold greater than +1 at half of the saved frame based on the previous saved frame. It is more effective to perform it empirically using the previous frame rather than searching in one frame.
+
+### Discussion
+In addition, i have created and tested a classifier using deep learning. i used a much larger number of data (car: 38780, nocar: 38780) than when using svm. process of extracting the HOG feature and tuning the parameters is excluded, and the process of creating the heat map can be simple. the implementation of the application has been simplified by extracting the valid features in the hidden layer convolution process.
+However, the issue of the deep learning approach requires a large amount of learning data, but if sufficient learning data can be provided, a more practical solution than the traditional computer vision approach would be possible.
+
+Currently implemented code has scale problems, but there are excellent deep-running structures such as 
+
+- [Single Shot MultiBox Detector (SSD)](https://arxiv.org/abs/1512.02325)
+- [Real-Time Object Detection (YOLO)](https://pjreddie.com/media/files/papers/yolo.pdf)
+- [SqueezeDet](https://arxiv.org/abs/1612.01051)
+
+There is still a possibility that an object that is far away can not be identified.
