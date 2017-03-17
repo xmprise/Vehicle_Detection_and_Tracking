@@ -80,3 +80,14 @@ The combined detection area uses the heat map and the threshold, and the area en
 The final detection area labels the highest column in the heatmap and is set to the end.
 
 ![heatmap](img/heat_app.png)
+
+Result image is shown below.
+
+![boxes_1](img/result1.png)   |  ![boxes_2](img/result2.png)
+:----------------------------:|:------------------------------:
+![boxes_1](img/result3.png)   |  ![boxes_2](img/result4.png)
+
+In the first attempt, i learned a lot of data by using SVM classifier and used only Y channel in YUV space. i guess that there was an overfitting problem, but i was advised to use all the color spaces in the forum, and it gave better results. When i learned again with a relatively small number of data, it showed 98.2% accuracy and also been significantly reduced processing time.
+
+### Tracking image frame in a video
+Code that processes video frames is implemented in an `Process Video Frame` cell and stores the previous 13 frames by creating a detection history. Detects by setting a heat map threshold greater than +1 at half of the saved frame based on the previous saved frame. It is more effective to perform it empirically using the previous frame rather than searching in one frame.
